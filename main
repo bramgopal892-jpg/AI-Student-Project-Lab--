@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Student Project Lab</title>
+
+<style>
+body { font-family: Arial, sans-serif; margin:0; background:#f0f4f8; }
+header { background:#1e88e5; color:white; padding:20px; text-align:center; }
+nav a { color:white; margin:0 10px; text-decoration:none; font-weight:bold; }
+.hero { text-align:center; padding:40px; }
+.hero input { width:60%; padding:10px; }
+.hero button { padding:10px 20px; background:#43a047; color:white; border:none; border-radius:5px; cursor:pointer; }
+.features { display:flex; flex-wrap:wrap; justify-content:center; }
+.feature-box { background:white; width:220px; margin:10px; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.1); text-align:center; }
+footer { background:#1e88e5; color:white; text-align:center; padding:15px; margin-top:30px; }
+#response { text-align:center; padding:20px; font-size:18px; }
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>AI Student Project Lab</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#">Ideas</a>
+<a href="#">Projects</a>
+<a href="#">Study Help</a>
+</nav>
+</header>
+
+<div class="hero">
+<h2>Apne Ideas ko Reality me Badlo</h2>
+<input id="userInput" placeholder="LED, Motor, Buzzer likhe...">
+<br><br>
+<button onclick="processIdea()">Process</button>
+</div>
+
+<div class="features">
+<div class="feature-box">🌍 Multi-Language</div>
+<div class="feature-box">🤖 AI Guide</div>
+<div class="feature-box">🛠 Arduino Projects</div>
+<div class="feature-box">📚 Study Help</div>
+</div>
+
+<div id="response"></div>
+
+<footer>
+© 2025 AI Student Project Lab
+</footer>
+
+<script>
+function processIdea() {
+  let idea = document.getElementById("userInput").value;
+
+  if (idea === "") {
+    document.getElementById("response").innerHTML = "❌ Please idea likhiye";
+  } else {
+    document.getElementById("response").innerHTML =
+      "✅ Aapka idea <b>" + idea + "</b> process ho raha hai...";
+  }
+}
+</script>
+
+</body>
+</html>
